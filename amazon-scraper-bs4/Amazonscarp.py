@@ -14,7 +14,7 @@ for z in range(1,15):
     # https://www.amazon.in/s?k=phone&page=2
     url =f'https://www.amazon.in/s?k={search_term}&page={z}'
     print(url)
-    headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36'}
+    headers = {'yout user agent...'}
     r = requests.get(url,headers=headers)
     soup  = BeautifulSoup(r.text,'html.parser')
 
