@@ -32,11 +32,16 @@ for z in range(1,15):
             mal = 'no_price'
         try:
             product_data = data[x].text
-            rateing = rateings[x].text
-            img = imgs[x]['src']
         except:
             product_data = 'none'
+        try:
+            rateing = rateings[x].text
+        except:
+        
             rateing = 'none'
+        try:
+             img = imgs[x]['src']
+        except:
             img = 'Img_link_not_found'
         main_dir = {
             'product_name':title,
