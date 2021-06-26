@@ -11,7 +11,6 @@ main_list=[]
 g=0
 search_term = 'headphone'
 for z in range(1,15):
-    # https://www.amazon.in/s?k=phone&page=2
     url =f'https://www.amazon.in/s?k={search_term}&page={z}'
     print(url)
     headers = {'yout user agent...'}
@@ -54,8 +53,6 @@ for z in range(1,15):
     print(f'printing_page {z}')
 
 
-# print(don)
-# print(main_list)
 h = random.randrange(2,100)
 data_frame = pd.DataFrame(main_list)
 
