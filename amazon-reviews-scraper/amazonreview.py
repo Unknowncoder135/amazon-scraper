@@ -9,9 +9,9 @@ from bs4 import SoupStrainer
 main_list = []
 
 
-for x in range(1,6):
+for x in range(1,99):
     url = f'https://www.amazon.co.uk/product-reviews/B07WD58H6R/ref=cm_cr_getr_d_paging_btm_prev_1?ie=UTF8&reviewerType=all_reviews&pageNumber={x}'
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
+    headers = {'User-Agent': 'put your agent here'}
     r = requests.get(url, headers=headers)
     soup  = BeautifulSoup(r.text,'html.parser')
 
@@ -34,7 +34,7 @@ for x in range(1,6):
 
         }
         main_list.append(main_dir)
-        # print(main_list)
+        print(f'current_page{x}')
 
 
 csv = pd.DataFrame(main_list)
