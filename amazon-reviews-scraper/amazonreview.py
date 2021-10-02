@@ -16,6 +16,8 @@ for x in range(1,99):
     soup  = BeautifulSoup(r.text,'html.parser')
 
     main_div = soup.find('div',class_='a-section a-spacing-none reviews-content a-size-base')
+    main_name = soup.find_all('div',class_='main-name-section-one')
+    main_rate = soup.find_all('h1',class_='mais-rate-price')
     
     main_item  = main_div.find_all('div',class_='a-section celwidget')
 
