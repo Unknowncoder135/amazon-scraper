@@ -57,3 +57,39 @@ h = random.randrange(2,100)
 data_frame = pd.DataFrame(main_list)
 
 data_frame.to_csv(f'Amazon_data{h}.csv',index=False)
+
+#new changes to improve speed
+
+
+# Sum of natural numbers up to num
+
+num = 16
+
+if num < 0:
+   print("Enter a positive number")
+else:
+   sum = 0
+   # use while loop to iterate until zero
+   while(num > 0):
+       sum += num
+       num -= 1
+   print("The sum is", sum)
+
+
+# Program to transpose a matrix using a nested loop
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)
